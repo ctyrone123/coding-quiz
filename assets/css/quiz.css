@@ -1,0 +1,24 @@
+.choice-container {
+    display: flex;
+    margin-bottom: 0.5rem;
+    width: 30%;
+    font-size: 1.4rem;
+    border: 0.1rem solid black;
+    background-color: white;
+    padding-left: 2rem;
+    color: white;
+    background: rgb(70, 6, 70);
+    border-radius: .5rem;
+  }
+  
+  .choice-container:hover {
+    cursor: pointer;
+    color: black;
+    background-color: #af70e9;
+  }
+  
+  .choice-text {
+    
+    width: 100%;
+  }
+  
