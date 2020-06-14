@@ -5,7 +5,7 @@ var currentQuestion = {};
 var acceptingAnswers = false;
 var questionCounter = 0;
 var availableQuesions = [];
-var countdown = 60;
+let countdown = 60;
 
 var questions = [
     {
@@ -54,13 +54,15 @@ var questions = [
 
 function startGame() {
     questionCounter = 0;
+    countdown = 60;
     availableQuesions = [...questions];
     getNewQuestion();
 };
 
 function getNewQuestion () {
-    if (availableQuesions.length === 0) {
-        return window.location.assign('/end.html');
+    if (availableQuesions.length === 0 || countdown === 0) {
+        localStorage.setItem("mostRecentTime", countdown);
+        return window.location.assign("end.html");
     }
     questionCounter++;
     var questionIndex = Math.floor(Math.random() * availableQuesions.length);
@@ -84,6 +86,7 @@ function timer() {
 
     if (countdown < 1) {
         window.clearInterval(update);
+        return window.location.assign("end.html");  
     }
 };
 update = setInterval("timer()", 1000);
