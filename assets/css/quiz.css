@@ -1,24 +1,31 @@
-.choice-container {
+.answer-wrapper {
     display: flex;
     margin-bottom: 0.5rem;
-    width: 30%;
+    width: 40%;
     font-size: 1.4rem;
     border: 0.1rem solid black;
     background-color: white;
-    padding-left: 2rem;
     color: white;
     background: rgb(70, 6, 70);
     border-radius: .5rem;
   }
   
-  .choice-container:hover {
+  .answer-wrapper:hover {
     cursor: pointer;
     color: black;
     background-color: #af70e9;
   }
   
-  .choice-text {
+  .answers {
     
     width: 100%;
   }
-  
+  .hud {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-bottom: 4rem;
+  }
+  .display {
+    display: flex;
+  }
